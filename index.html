@@ -1,0 +1,56 @@
+<!--
+File: index.html
+Gui Assignment: Updating The Multiplication Table Part 2
+
+Description: This is the HTML file for the updated multiplication table.  This utilizes the jquery error guarding from part 1 but adds the use
+of sliders and tabs to the website.
+
+Zuriel Pagan, UMass Lowell Computer Science, zuriel_pagan@student.uml.edu
+Copywright (c) 2024 by Zuriel.  All rights reserved.  May be freely copied or excerpted for educational purposes with credit to the author.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multiplication Table Generator</h1>
+        <form id="tableForm">
+            <label for="startH">Start Horizontal:</label>
+            <input type="text" id="startH" name="startH" required>
+            <div id="sliderStartH" class="slider"></div>
+            
+            <label for="endH">End Horizontal:</label>
+            <input type="text" id="endH" name="endH" required>
+            <div id="sliderEndH" class="slider"></div>
+            
+            <label for="startV">Start Vertical:</label>
+            <input type="text" id="startV" name="startV" required>
+            <div id="sliderStartV" class="slider"></div>
+            
+            <label for="endV">End Vertical:</label>
+            <input type="text" id="endV" name="endV" required>
+            <div id="sliderEndV" class="slider"></div>
+            
+            <button type="submit">Generate Table</button>
+        </form>
+        <div id="error"></div>
+        <div id="tableContainer">
+            <table id="multiplicationTable"></table>
+        </div>
+        <div id="tabs">
+            <ul></ul>
+        </div>
+        <button id="deleteTabsButton">Delete Selected Tabs</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
